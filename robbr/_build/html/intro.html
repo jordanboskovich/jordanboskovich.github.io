@@ -180,9 +180,7 @@
         </ul>
         <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="dataset.html">Dataset Structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="evaluation_metrics.html">Evaluation Metrics &amp; Task Definition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="baseline.html">Baseline Evaluation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="model_leaderboard.html">Model Leaderboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evaluation_metrics.html">Evaluation Metrics</a></li>
 </ul>
 
     </div>
@@ -380,6 +378,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-formulation">Task Formulation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benchmark-development">Benchmark Development</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example">An Example</a></li>
 </ul>
 </li>
 </ul>
@@ -401,13 +400,16 @@ document.write(`
 <p>The RoBBR benchmark aims to provide an expert-validated tool for assessing whether models can accurately make risk of bias judgments for biomedical papers. This involves analyzing research study methodologies, evaluating the risk of bias, and providing expert-generated bias annotations. The benchmark follows the risk of bias framework developed by Cochrane and comprises four main tasks, derived from over 500 referenced papers. These tasks are designed to ensure a comprehensive evaluation of the models’ capabilities in identifying and interpreting methodological strengths and weaknesses in biomedical studies.</p>
 <section id="benchmark-development">
 <h3>Benchmark Development<a class="headerlink" href="#benchmark-development" title="Link to this heading">#</a></h3>
-<p>RoBBR is derived from 63 Cochrane meta-analyses and 532 papers referenced in those meta-analyses. The benchmark is divided into four main tasks:</p>
+<p>The benchmark is divided into four main tasks:</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Study</span> <span class="pre">Inclusion/Exclusion</span></code> Given the search protocol information and meta-analysis objective as input, determine whether a study should be included in the meta-analysis.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Bias</span> <span class="pre">Retrieval</span></code> Retrieve sentences from the paper that support a judgment about the study’s risk of bias.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Support</span> <span class="pre">Judgment</span> <span class="pre">Selection</span></code> Reason with the retrieved information by choosing the judgment that best supports the determination of the study’s risk of bias from a multiple-choice task.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Risk</span> <span class="pre">Level</span> <span class="pre">Determination</span></code> Given the complete paper, the PICO of the study, the objective of the meta-analysis, and the definition of the bias, assess the study’s overall risk of bias as high, low, or unclear.</p></li>
 </ol>
+</section>
+<section id="an-example">
+<h3>An Example<a class="headerlink" href="#an-example" title="Link to this heading">#</a></h3>
 </section>
 </section>
 <div class="toctree-wrapper compound">
@@ -471,6 +473,7 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-formulation">Task Formulation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benchmark-development">Benchmark Development</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example">An Example</a></li>
 </ul>
 </li>
 </ul>

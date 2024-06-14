@@ -8,7 +8,7 @@ The RoBBR benchmark aims to provide an expert-validated tool for assessing wheth
 
 ### Benchmark Development
 
-RoBBR is derived from 63 Cochrane meta-analyses and 532 papers referenced in those meta-analyses. The benchmark is divided into four main tasks:
+The benchmark is divided into four main tasks:
 
 1. ``Study Inclusion/Exclusion`` Given the search protocol information and meta-analysis objective as input, determine whether a study should be included in the meta-analysis.
 
@@ -19,3 +19,4 @@ RoBBR is derived from 63 Cochrane meta-analyses and 532 papers referenced in tho
 4. ``Risk Level Determination`` Given the complete paper, the PICO of the study, the objective of the meta-analysis, and the definition of the bias, assess the study's overall risk of bias as high, low, or unclear.
 
 ### An Example
+

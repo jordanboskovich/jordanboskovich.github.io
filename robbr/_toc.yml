@@ -6,6 +6,4 @@ root: intro
 chapters:
   - file: dataset
   - file: evaluation_metrics
-  - file: baseline
-  - file: model_leaderboard
   
