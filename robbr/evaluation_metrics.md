@@ -32,4 +32,4 @@ BR @ Optimal measures recall when the “optimal" number of sentences are retrie
 
 - **Dataset Sources:** RoBBR is derived from 63 Cochrane meta-analyses and 532 papers referenced in those meta-analyses.
 - **Train/Test Split:** 23 randomly selected meta-analyses and their 228 corresponding papers were put in the dev set. The other 40 meta-analyses and their corresponding 304 papers are in the test set.
-- **Annotation Process:** Support judgments containing specific claims about the study are mapped to specific sentences within the
+- **Annotation Process:** Support judgments containing specific claims about the study are mapped to specific sentences within the paper using GPT-4. Then, all 2221 support judgment aspects are manually inspected to ensure they relate to specific information from the paper. 
