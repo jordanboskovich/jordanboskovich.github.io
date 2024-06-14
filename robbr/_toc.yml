@@ -3,7 +3,10 @@
 
 format: jb-book
 root: intro
+
 chapters:
-  - file: structure
-  - file: evaluation_metrics
-  
+  - file: task_details
+  - file: dataset_and_evaluation
+    sections:
+    - file: structure.md
+  - file: example.md

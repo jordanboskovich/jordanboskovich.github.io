@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>RoBBR Structure &#8212; RoBBr</title>
+    <title>Detailed Example: Risk of Bias in Leishmaniasis Studies &#8212; RoBBr</title>
   
   
   
@@ -57,11 +57,10 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'structure';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'example';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Detailed Example: Risk of Bias in Leishmaniasis Studies" href="example.html" />
-    <link rel="prev" title="Dataset and Evaluation Metrics" href="dataset_and_evaluation.html" />
+    <link rel="prev" title="RoBBR Structure" href="structure.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -179,11 +178,11 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="task_details.html">Task Details</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="dataset_and_evaluation.html">Dataset and Evaluation Metrics</a><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">RoBBR Structure</a></li>
-</ul><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+<li class="toctree-l1 has-children"><a class="reference internal" href="dataset_and_evaluation.html">Dataset and Evaluation Metrics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structure.html">RoBBR Structure</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="example.html">Detailed Example: Risk of Bias in Leishmaniasis Studies</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Detailed Example: Risk of Bias in Leishmaniasis Studies</a></li>
 </ul>
 
     </div>
@@ -255,7 +254,7 @@
       
       
       
-      <li><a href="https://github.com/jordanboskovich/RoBBr/issues/new?title=Issue%20on%20page%20%2Fstructure.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/jordanboskovich/RoBBr/issues/new?title=Issue%20on%20page%20%2Fexample.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -285,7 +284,7 @@
       
       
       
-      <li><a href="_sources/structure.md" target="_blank"
+      <li><a href="_sources/example.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -356,7 +355,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -367,11 +368,27 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>RoBBR Structure</h1>
+    <h1>Detailed Example: Risk of Bias in Leishmaniasis Studies</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#study-background">Study Background</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#search-protocol">Search Protocol</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objective-of-the-meta-analysis">Objective of the Meta-Analysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#full-paper">Full Paper</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bias-assessment">Bias Assessment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#study-details-pico">Study Details (PICO)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#significance">Significance</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -381,65 +398,84 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="robbr-structure">
-<h1>RoBBR Structure<a class="headerlink" href="#robbr-structure" title="Link to this heading">#</a></h1>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">task1_SIE_test.json</span></code> and <code class="docutils literal notranslate"><span class="pre">task1_SIE_dev.json</span></code>: Test and dev set of task 1 Study Inclusion/Exclusion</p>
-<ul>
-<li><p><strong>paper_doi</strong>: The DOI of the paper.</p></li>
-<li><p><strong>objective</strong>: The meta-analysis objective.</p></li>
-<li><p><strong>search_protocol</strong>: search protocol information of the meta-analysis.</p></li>
-<li><p><strong>full_paper</strong>: The full paper content.</p></li>
-<li><p><strong>label</strong>: One of [included, excluded], showing whether the paper is included or excluded in the meta-analysis.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">task2_ROBSR_test.json</span></code> and <code class="docutils literal notranslate"><span class="pre">task2_ROBSR_dev.json</span></code>: Test and dev set of task 2 Risk of Bias Sentence Retrieval</p>
-<ul>
-<li><p><strong>paper_doi</strong>: The DOI of the paper.</p></li>
-<li><p><strong>bias</strong>: The bias to be considered.</p></li>
-<li><p><strong>PICO</strong>: PICO of a study in the paper, including Methods, Participants, Intervention, Outcome, and Notes.</p></li>
-<li><p><strong>objective</strong>: The meta-analysis objective.</p></li>
-<li><p><strong>paper_as_candidate_pool</strong>: A tuple of text elements from the paper. Each text element is a sentence, a section title, a table, or a figure caption.</p></li>
-<li><p><strong>aspects</strong>: A dictionary that maps aspect id to bias aspect.</p></li>
-<li><p><strong>aspect2sentence_indices</strong>: A mapping (i.e., dictionary) between aspect id and all sentence indices that independently are source of information for that aspect, as annotated by our pipeline.</p></li>
-<li><p><strong>sentence_index2aspects</strong>: A mapping (i.e., dictionary) between sentence index and all aspect ids that this sentence is the source of information of.</p></li>
-<li><p><strong>bias_retrieval_at_optimal_evaluation</strong>: This is a dictionary that contains the necessary information for evaluating the model’s performance on the task Bias Retrieval &#64;Optimal.</p>
-<ul>
-<li><p><strong>optimal</strong>: A positive integer, which is the smallest number of sentences needed to cover the largest number of aspects.</p></li>
-<li><p><strong>one_selection_of_sentences</strong>: A list of sentence indices. The list size is the optimal number. The list of sentences cover the largest number of aspects. Note, there are potentially other lists of sentences that have the same size and also cover the largest number of aspects.</p></li>
-<li><p><strong>covered_aspects</strong>: The list of aspects that are covered. In this case, the list of aspects covered is the list of all aspects.</p></li>
-</ul>
-</li>
-<li><p><strong>bias_retrieval_at_3_evaluation</strong>: This is a dictionary that contains the necessary information for evaluating your model’s performance on the task Bias Retrieval &#64;3.</p>
-<ul>
-<li><p><strong>one_selection_of_sentences</strong>: A list of 3 sentence indices. The list of sentences cover the largest number of aspects that can be covered under the restriction of 3 sentences. Note, there are potentially other lists of sentences that have size 3 and cover the same number of aspects.</p></li>
-<li><p><strong>covered_aspects</strong>: The list of aspects that are covered. In this case, this list of aspects may not be all the aspects. Since in the paper, we calculate aspect recall by dividing the number of aspects covered by model’s retrieved sentences against the total number of aspects, for Bias Retrieval &#64;3, the maximum possible performance is not 100%.</p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">task3_SJS_test.json</span></code> and <code class="docutils literal notranslate"><span class="pre">task3_SJS_dev.json</span></code>: Test and dev set of task 3 Support Judgment Selection</p>
-<ul>
-<li><p><strong>paper_doi</strong>: The DOI of the paper.</p></li>
-<li><p><strong>bias</strong>: The bias to be considered.</p></li>
-<li><p><strong>PICO</strong>: PICO of a study in the paper, including Methods, Participants, Intervention, Outcome, and Notes.</p></li>
-<li><p><strong>objective</strong>: The meta-analysis objective.</p></li>
-<li><p><strong>full_paper</strong>: The full paper content.</p></li>
-<li><p><strong>options</strong>: The seven options for the multiple choice.</p></li>
-<li><p><strong>label</strong>: The index of the correct option.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">task4_RLD_test.json</span></code> and <code class="docutils literal notranslate"><span class="pre">task4_RLD_dev.json</span></code>: Test and dev set of task 4 Risk Level Determination</p>
-<ul>
-<li><p><strong>paper_doi</strong>: The DOI of the paper.</p></li>
-<li><p><strong>bias</strong>: The bias to be considered.</p></li>
-<li><p><strong>PICO</strong>: PICO of a study in the paper, including Methods, Participants, Intervention, Outcome, and Notes.</p></li>
-<li><p><strong>objective</strong>: The meta-analysis objective.</p></li>
-<li><p><strong>full_paper</strong>: The full paper content.</p></li>
-<li><p><strong>label</strong>: One of [low, high, unclear], representing the risk level of the bias.</p></li>
-</ul>
-</li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="detailed-example-risk-of-bias-in-leishmaniasis-studies">
+<h1>Detailed Example: Risk of Bias in Leishmaniasis Studies<a class="headerlink" href="#detailed-example-risk-of-bias-in-leishmaniasis-studies" title="Link to this heading">#</a></h1>
+<p>This example illustrates how the RoBBR benchmark applies to a real-world scenario involving a study on leishmaniasis interventions. It includes the study’s design, population, interventions, outcomes, and potential biases.</p>
+<section id="study-background">
+<h2>Study Background<a class="headerlink" href="#study-background" title="Link to this heading">#</a></h2>
+<p>This study focuses on interventions to control leishmaniasis, a disease endemic in certain regions, which is addressed through randomized controlled trials (RCTs).</p>
+<section id="search-protocol">
+<h3>Search Protocol<a class="headerlink" href="#search-protocol" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-left"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Types of Studies</p></td>
+<td class="text-left"><p>Randomized controlled trials (RCTs)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Types of Participants</p></td>
+<td class="text-left"><p>People living in leishmaniasis endemic regions.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Types of Interventions</p></td>
+<td class="text-left"><p>Any intervention that aims to reduce leishmaniasis incidence through vector or reservoir control.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Types of Outcome Measures</p></td>
+<td class="text-left"><p>- People developing CL or VL infections.<br> - Estimates of the vector density measured by an appropriate technique (adult sandfly density estimated by counts of vectors either landing on exposed body parts of humans acting as baits or collected resting inside buildings, for example, on walls).<br> - Number of participants with positive immunological or biochemical tests that detect contact with the parasite (for example, leishmanin skin test conversion rates or lymphocyte proliferation rates, or both).<br> - Adverse effects on people.<br> - Adherence to control measures; for example, the extent to which specified intervention components were delivered as prescribed.<br> - Measures of environmental impact (assessment of the possible impact - positive or negative - that the interventions may have on the natural environment) or sustainability (assessment of the ability to change biological and human processes, functions, biodiversity and productivity), or both.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="objective-of-the-meta-analysis">
+<h3>Objective of the Meta-Analysis<a class="headerlink" href="#objective-of-the-meta-analysis" title="Link to this heading">#</a></h3>
+<p>The goal is to assess the effects of various control interventions on cutaneous and visceral leishmaniasis.</p>
+</section>
+<section id="full-paper">
+<h3>Full Paper<a class="headerlink" href="#full-paper" title="Link to this heading">#</a></h3>
+<p>For a comprehensive understanding, the full paper can be accessed here: <a class="reference external" href="https://journals.plos.org/plosntds/article?id=10.1371/journal.pntd.0003172">Werneck et al.</a>.</p>
+</section>
+</section>
+<section id="bias-assessment">
+<h2>Bias Assessment<a class="headerlink" href="#bias-assessment" title="Link to this heading">#</a></h2>
+<p><strong>Bias Name:</strong> Selective Reporting (Reporting Bias)</p>
+<p><strong>Bias Definition:</strong> Reporting bias due to selective outcome reporting</p>
+</section>
+<section id="study-details-pico">
+<h2>Study Details (PICO)<a class="headerlink" href="#study-details-pico" title="Link to this heading">#</a></h2>
+<p><strong>PICO</strong> (Participant, Intervention, Comparison, Outcome) is a framework used to structure and focus research questions:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-left"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Methods</strong></p></td>
+<td class="text-left"><p><strong>Trial design</strong>: Cluster-RCT.<br> <strong>Unit of randomization</strong>: Geographic area.<br> <strong>Number of clusters</strong>: 40 geographic areas.<br> <strong>Entomological data collection</strong>: Not done.<br> <strong>Clinical data collection</strong>: Conversion of the Montenegro skin test (MST) at 18 months of follow-up.<br> <strong>Length of follow-up</strong>: 18 months.<br> <strong>Analysis</strong>: Analysed at cluster level.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Participants</strong></p></td>
+<td class="text-left"><p>Ten localities in 7 neighbourhoods of the city of Teresina (Brazil) were divided into blocks, each containing an average of 60 residences. For each locality, 4 blocks were selected to minimize the risk of cross-contamination of interventions. Eligible participants were residents of selected blocks aged 1 year or above with no history of VL. The 40 geographic areas (blocks) randomly allocated to the 4 types of interventions (697 subjects MST-).<br> <strong>Endemic disease</strong>: VL caused by L. chagasi (L. infantum).</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Interventions</strong></p></td>
+<td class="text-left"><p>1. Spraying households and residential annexes with insecticide.<br> 2. Elimination of infected dogs.<br> 3. Combination of spraying and eliminating infected dogs.<br> 4. No intervention.<br> <strong>Description of spraying</strong>: Performed according to the routine of the VL Control Program of the Zoonosis Control Center of the Teresina City Health Department. Interventions were delivered in the selected blocks every 6 months, for three times, beginning just after each household visit. The elimination of infected dogs was decided if indirect immunofluorescence test was more or equalled 1:40.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Outcomes</strong></p></td>
+<td class="text-left"><p>Cases of infection by L. infantum at 18 months determined by conversion of the MST (MST- at the beginning) or diagnosis of active VL.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Notes</strong></p></td>
+<td class="text-left"><p><strong>Country</strong>: Brazil (Teresina, Itararé quarter).<br> <strong>Trial dates</strong>: January 2004 to December 2006.<br> <strong>Trial sponsor</strong>: Funded by Health Surveillance Unit from the Brazilian Ministry of Health. One author was partially funded by the Brazilian Research Council (CNPq 306267/2010-1 and 202088/2012-0). The founders had no role in trial design, data collection and analysis, decision to publish, or preparation of the manuscript. The authors have declared that no competing interests exist.<br> <strong>Sample size</strong>: Calculated.<br> <strong>Compliance assessment</strong>: Not reported.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="significance">
+<h2>Significance<a class="headerlink" href="#significance" title="Link to this heading">#</a></h2>
+<p>This example underscores the importance of thorough study designs and the implications of bias in interpreting study results. By applying the RoBBR benchmark to such scenarios, researchers can better understand and mitigate biases in biomedical research.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -473,22 +509,13 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="dataset_and_evaluation.html"
+       href="structure.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Dataset and Evaluation Metrics</p>
+        <p class="prev-next-title">RoBBR Structure</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="example.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Detailed Example: Risk of Bias in Leishmaniasis Studies</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -496,6 +523,29 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#study-background">Study Background</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#search-protocol">Search Protocol</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objective-of-the-meta-analysis">Objective of the Meta-Analysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#full-paper">Full Paper</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bias-assessment">Bias Assessment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#study-details-pico">Study Details (PICO)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#significance">Significance</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
